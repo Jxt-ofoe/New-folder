@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard – SafeSpace</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+</head>
+
+<body class="bg-light">
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/index.html" class="nav-logo">🌱 SafeSpace Admin</a>
+            <div class="nav-links">
+                <a href="/index.html">View Site</a>
+                <button class="btn btn-ghost btn-sm" id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Overlay -->
+    <div id="admin-login-overlay"
+        style="position:fixed; inset:0; background:var(--clr-bg); z-index:2000; display:flex; align-items:center; justify-content:center;">
+        <div class="form-card" style="width:100%; max-width:400px;">
+            <h2 class="mb-4">Admin Login</h2>
+            <p class="text-muted mb-6">Enter the administrator password to continue.</p>
+            <form id="admin-login-form" class="form-stack">
+                <div class="form-group">
+                    <label for="admin-pass" class="form-label">Password</label>
+                    <input type="password" id="admin-pass" class="form-input" placeholder="••••••••" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Login 🛡️</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="admin-container" id="admin-content" style="display:none;">
+        <div class="admin-header">
+            <h1>Dashboard</h1>
+            <div class="hero-badge">Administrator Access</div>
+        </div>
+
+        <div class="admin-tabs">
+            <div class="admin-tab active" data-tab="reports">Reported Content</div>
+            <div class="admin-tab" data-tab="feedbacks">User Feedback</div>
+        </div>
+
+        <!-- Reports Section -->
+        <div id="tab-reports" class="tab-content">
+            <div id="reports-list">
+                <div class="loading">
+                    <div class="spinner"></div>Loading reports...
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div id="tab-feedbacks" class="tab-content" style="display:none;">
+            <div id="feedbacks-list">
+                <div class="loading">
+                    <div class="spinner"></div>Loading feedback...
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+
+</html>

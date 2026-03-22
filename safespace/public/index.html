@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeSpace – You Are Not Alone</title>
+  <meta name="description"
+    content="SafeSpace is an anonymous mental health support platform where you can share your story and receive encouraging messages from others." />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+</head>
+
+<body>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer" role="alert">
+    🛡️ <strong>SafeSpace is for peer support only</strong> and is not a substitute for professional mental health care.
+    If you're in crisis, please contact a helpline in your country.
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/index.html" class="nav-logo" aria-label="SafeSpace Home">
+        <span class="logo-icon">🌱</span> SafeSpace
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/stories.html">Feed</a>
+        <a href="/share.html" class="nav-cta">Share Your Story</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-badge">🌿 A safe, anonymous community</div>
+    <h1 id="hero-heading">You Are <span>Not Alone</span> in This</h1>
+    <p class="hero-subtitle">
+      Share your mental health journey anonymously and receive kind, encouraging messages from a compassionate
+      community.
+    </p>
+    <div class="hero-actions">
+      <a href="/share.html" class="btn btn-primary" id="hero-share-btn">✍️ Share Your Story</a>
+      <a href="/stories.html" class="btn btn-secondary" id="hero-read-btn">📖 Read Stories</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num" id="stat-stories">–</div>
+        <div class="lbl">Stories Shared</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num" id="stat-messages">–</div>
+        <div class="lbl">Messages of Support</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">100%</div>
+        <div class="lbl">Anonymous</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Stories -->
+  <main class="container" id="main-content">
+    <div class="section-header mt-8">
+      <div>
+        <h2 class="section-title">Featured Stories</h2>
+        <p class="section-subtitle">Recent stories shared by our community</p>
+      </div>
+      <a href="/stories.html" class="btn btn-secondary btn-sm">View All →</a>
+    </div>
+
+    <div id="featured-stories" class="stories-grid" aria-live="polite">
+      <div class="loading">
+        <div class="spinner"></div>Loading stories…
+      </div>
+    </div>
+  </main>
+
+  <!-- How It Works -->
+  <section class="container mt-8" aria-labelledby="how-heading">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title" id="how-heading">How SafeSpace Works</h2>
+        <p class="section-subtitle">Simple, safe, and supportive</p>
+      </div>
+    </div>
+    <div class="stories-grid">
+      <div class="story-card" style="cursor:default">
+        <div class="story-card-tag">Step 1</div>
+        <h3 class="story-card-title">✍️ Share Your Story</h3>
+        <p class="story-card-preview">Write about your mental health journey — anonymously or with your name. No
+          judgment, no pressure.</p>
+      </div>
+      <div class="story-card" style="cursor:default">
+        <div class="story-card-tag">Step 2</div>
+        <h3 class="story-card-title">💬 Receive Support</h3>
+        <p class="story-card-preview">Community members send encouraging, kind messages under your story to let you know
+          you're not alone.</p>
+      </div>
+      <div class="story-card" style="cursor:default">
+        <div class="story-card-tag">Step 3</div>
+        <h3 class="story-card-title">💙 Give Back</h3>
+        <p class="story-card-preview">Read others' stories and share a message of hope. One kind word can change
+          someone's day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-logo">🌱 SafeSpace</div>
+    <p class="footer-tagline">A compassionate community for mental health support.</p>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="/index.html">Home</a>
+      <a href="/stories.html">Feed</a>
+      <a href="/share.html">Share Story</a>
+      <a href="/feedback.html">Feedback</a>
+      <a href="/admin.html">Admin</a>
+    </nav>
+    <p class="footer-copy">© 2026 SafeSpace. This platform is for peer support only and not a substitute for
+      professional help.</p>
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+
+</html>

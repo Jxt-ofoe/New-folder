@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Share Feedback – SafeSpace</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/index.html" class="nav-logo">🌱 SafeSpace</a>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/stories.html">Feed</a>
+                <a href="/share.html" class="nav-cta">Share Story</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-sm mt-8">
+        <div class="form-card">
+            <h1 class="mb-4">Share Your Feedback</h1>
+            <p class="text-muted mb-6">How was your experience with SafeSpace? We value your thoughts on how we can
+                improve this community.</p>
+
+            <div id="feedback-success" class="form-success mb-4"></div>
+            <div id="feedback-error" class="form-error mb-4"></div>
+
+            <form id="feedback-form" class="form-stack">
+                <div class="form-group">
+                    <label class="form-label">How would you rate your experience?</label>
+                    <div style="display:flex;gap:var(--sp-4);font-size:1.5rem;">
+                        <label><input type="radio" name="rating" value="1"> 😞</label>
+                        <label><input type="radio" name="rating" value="2"> 😐</label>
+                        <label><input type="radio" name="rating" value="3" checked> 🙂</label>
+                        <label><input type="radio" name="rating" value="4"> 😊</label>
+                        <label><input type="radio" name="rating" value="5"> 😍</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback-content" class="form-label">Tell us more...</label>
+                    <textarea id="feedback-content" class="form-textarea"
+                        placeholder="Your thoughts, suggestions, or issues..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submit-btn">Send Feedback 💙</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/feedback.js"></script>
+</body>
+
+</html>
