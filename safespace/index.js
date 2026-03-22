@@ -35,12 +35,15 @@ app.get('/{*splat}', (req, res) => {
 async function start() {
     try {
         await initDB();
-        app.listen(PORT, () => {
-            console.log(`🌱 SafeSpace server running at http://localhost:${PORT}`);
-        });
+        if (process.env.NODE_ENV !== 'production') {
+            app.listen(PORT, () => {
+                console.log(`🌱 SafeSpace server running at http://localhost:${PORT}`);
+            });
+        }
     } catch (err) {
         console.error('Failed to initialize database:', err);
-        process.exit(1);
     }
 }
 start();
+
+module.exports = app;
